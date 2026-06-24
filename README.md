@@ -1,53 +1,51 @@
-# Browser-Based Chat Application
+# Voice Assistant
 
-## Description
-
-A real-time browser-based chat application built using Python, Flask, and Flask-SocketIO. Users can send and receive messages instantly through a web browser.
+A simple voice assistant built using Python.
 
 ## Features
 
-* Real-time messaging
-* Multiple user support
-* Username display
-* Responsive chat interface
-* Browser-based communication
+- Voice Recognition
+- Text to Speech
+- Tell Time
+- Tell Date
+- Open Google
+- Open YouTube
+- Open LinkedIn
+- Search Google
+- Wikipedia Search
+- Open Calculator
+- Open Notepad
+- Stop Command
+- Error Handling
 
 ## Technologies Used
 
-* Python
-* Flask
-* Flask-SocketIO
-* HTML
-* CSS
-* JavaScript
-
-## Project Structure
-
-browser_chat_app
-
-├── app.py
-
-├── requirements.txt
-
-├── templates
-
-│ └── index.html
-
-└── static
-
-└── style.css
+- Python
+- SpeechRecognition
+- PyAudio
+- pyttsx3
+- Wikipedia
 
 ## How to Run
 
-1. Install dependencies:
-   pip install flask flask-socketio
+1. Install required libraries
+2. Run:
 
-2. Run the application:
-   python app.py
+python assistant.py
 
-3. Open:
-   http://127.0.0.1:5000
+3. Speak commands through the microphone
 
-## Author
+## Example Commands
 
-Created as part of a Python Programming Internship Project.
+- hello
+- what is the time
+- what is today's date
+- open google
+- open youtube
+- open linkedin
+- search python programming
+- who is virat kohli
+- what is machine learning
+- open calculator
+- open notepad
+- stop
