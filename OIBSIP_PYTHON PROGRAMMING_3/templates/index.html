@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="chat-container">
+    <h2>Browser Chat Application</h2>
+
+   <ul id="messages"></ul>
+
+<input id="username" type="text" placeholder="Enter your name">
+<br><br>
+
+<input id="message" type="text" placeholder="Type a message">
+<button onclick="sendMessage()">Send</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+
+<script>
+    var socket = io();
+
+    socket.on('message', function(msg) {
+        let li = document.createElement("li");
+        li.textContent = msg;
+        document.getElementById("messages").appendChild(li);
+    });
+
+    function sendMessage() {
+        let username = document.getElementById("username").value;
+        let input = document.getElementById("message");
+
+        socket.send(username + ": " + input.value);
+
+        input.value = "";
+}
+          
+</script>
+
+</body>
+</html>0
